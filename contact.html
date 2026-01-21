@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Nexus Digital</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="custom.css" />
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-XXXXXXX");
+  </script>
+</head>
+
+<body>
+  <!-- SHARED HEADER -->
+  <nav class="navbar navbar-expand-lg border-bottom fixed-top py-3">
+    <div class="container">
+      <a class="navbar-brand fw-black text-primary tracking-tighter" href="index.html"
+        style="color: var(--indigo) !important; font-size: 1.5rem">NEXUS</a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-lg-4">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="case-studies.html">Case Studies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <a href="contact.html" class="btn btn-indigo px-4 py-2 ms-lg-4">Start Project</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTACT FORM SECTION -->
+  <main class="container py-5 d-flex justify-content-center">
+    <div class="card shadow-lg rounded-3xl p-4 p-md-5 w-100" style="max-width: 600px">
+      <h2 class="fw-black mb-2">Get a Free Audit</h2>
+      <p class="text-muted mb-4">
+        Complete the form and we'll analyze your site's performance.
+      </p>
+
+      <form id="contact_form">
+        <div class="row g-3">
+          <!-- Name -->
+          <div class="col-12">
+            <label class="form-label small fw-bold text-uppercase text-muted">Full Name</label>
+            <input type="text" id="name" class="form-control rounded-3xl py-3 border-2" placeholder="John Doe"
+              required />
+          </div>
+          <!-- Email -->
+          <div class="col-md-6">
+            <label class="form-label small fw-bold text-uppercase text-muted">Email Address</label>
+            <input type="email" id="email" class="form-control rounded-3xl py-3 border-2" placeholder="john@agency.com"
+              required />
+          </div>
+          <!-- Phone -->
+          <div class="col-md-6">
+            <label class="form-label small fw-bold text-uppercase text-muted">Phone Number</label>
+            <input type="tel" id="phone" class="form-control rounded-3xl py-3 border-2" placeholder="+1 (555) 000-0000"
+              required />
+          </div>
+          <!-- Service Dropdown -->
+          <div class="col-12">
+            <label class="form-label small fw-bold text-uppercase text-muted">Interested Service</label>
+            <select id="svc" class="form-select rounded-3xl py-3 border-2">
+              <option value="seo">SEO Strategy Audit</option>
+              <option value="ppc">PPC Campaign Launch</option>
+              <option value="analytics">GA4 / GTM Implementation</option>
+            </select>
+          </div>
+          <!-- Submit -->
+          <div class="col-12 mt-4">
+            <button type="submit" id="submit_btn" class="btn btn-indigo w-100 py-3 text-uppercase tracking-widest">
+              Send Inquiry
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- SHARED FOOTER -->
+  <footer class="py-5 mt-5">
+    <div class="container">
+      <div class="row pb-5 border-bottom border-secondary mb-5 align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <h3 class="text-white fw-bold">Join our Newsletter</h3>
+          <p class="mb-0">Practice newsletter form tracking here.</p>
+        </div>
+        <div class="col-md-6">
+          <form id="footer_newsletter" class="d-flex gap-2">
+            <input type="email" class="form-control footer-input py-3" placeholder="Enter your email" required />
+            <button type="submit" class="btn btn-indigo px-4 fw-bold rounded-3">
+              Join
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between small fw-bold text-uppercase">
+        <p class="mb-0">© 2026 Nexus Digital.</p>
+        <div class="d-flex gap-4">
+          <a href="https://linkedin.com" target="_blank" class="text-reset text-decoration-none">LinkedIn</a><a
+            href="https://twitter.com" target="_blank" class="text-reset text-decoration-none">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbwA_UuVObPVqT0bno7OF203eSBPk_3RUeisHG38UYIHCjnlonHKeS_vB84YTwG1rCQfqg/exec";
+    const form = document.getElementById("contact_form");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const btn = document.getElementById("submit_btn");
+      btn.innerText = "Sending...";
+      btn.disabled = true;
+
+      const formData = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        service: document.getElementById("svc").value,
+      };
+
+      // 1. Send to Google Sheets
+      fetch(scriptURL, {
+        method: "POST",
+        body: JSON.stringify(formData),
+        mode: "no-cors",
+      })
+        .then(() => {
+          // 2. DataLayer push for GA4 Lead Tracking
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+            event: "generate_lead",
+            form_id: "contact_form",
+            lead_service: formData.service,
+            // Note: Avoid sending PII (email/phone) to GA4 unless hashed
+          });
+
+          // 3. Success Redirect
+          window.location.href = "contact-thanks.html";
+        })
+        .catch((error) => {
+          console.error("Error!", error.message);
+          btn.innerText = "Error. Try Again.";
+          btn.disabled = false;
+        });
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>

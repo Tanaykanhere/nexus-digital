@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout | Nexus Digital</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="custom.css" />
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-XXXXXXX");
+  </script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg border-bottom fixed-top py-3">
+    <div class="container">
+      <a class="navbar-brand fw-black text-primary tracking-tighter" href="index.html"
+        style="color: var(--indigo) !important; font-size: 1.5rem">NEXUS</a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-lg-4">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="case-studies.html">Case Studies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <a href="contact.html" class="btn btn-indigo px-4 py-2 ms-lg-4">Start Project</a>
+      </div>
+    </div>
+  </nav>
+  <main class="container py-5 d-flex justify-content-center">
+    <div class="card shadow-lg rounded-3xl p-5 w-100" style="max-width: 450px">
+      <h2 class="fw-black mb-4">Checkout</h2>
+      <div class="d-flex justify-content-between mb-4 border-bottom pb-2">
+        <span>SEO Audit Pro</span><strong>$500</strong>
+      </div>
+      <form action="purchase-success.html" id="checkout_form">
+        <input type="email" class="form-control rounded-3xl py-3 mb-3 border-2" placeholder="Email" required />
+        <button type="submit" class="btn btn-indigo w-100 py-3">
+          Pay Now
+        </button>
+      </form>
+    </div>
+  </main>
+  <footer class="py-5 mt-5">
+    <div class="container">
+      <div class="row pb-5 border-bottom border-secondary mb-5 align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <h3 class="text-white fw-bold">Join our Newsletter</h3>
+          <p class="mb-0">Practice newsletter form tracking here.</p>
+        </div>
+        <div class="col-md-6">
+          <form id="footer_newsletter" class="d-flex gap-2">
+            <input type="email" class="form-control footer-input py-3" placeholder="Enter your email" required />
+            <button type="submit" class="btn btn-indigo px-4 fw-bold rounded-3">
+              Join
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between small fw-bold text-uppercase">
+        <p class="mb-0">© 2026 Nexus Digital.</p>
+        <div class="d-flex gap-4">
+          <a href="https://linkedin.com" target="_blank" class="text-reset text-decoration-none">LinkedIn</a><a
+            href="https://twitter.com" target="_blank" class="text-reset text-decoration-none">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>

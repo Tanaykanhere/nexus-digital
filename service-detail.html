@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Service Details | Nexus Digital</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="custom.css" />
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-XXXXXXX");
+  </script>
+</head>
+
+<body class="bg-white text-slate-900">
+  <!-- SHARED HEADER -->
+  <nav class="navbar navbar-expand-lg border-bottom fixed-top py-3">
+    <div class="container">
+      <a class="navbar-brand fw-black text-primary tracking-tighter" href="index.html"
+        style="color: var(--indigo) !important; font-size: 1.5rem">NEXUS</a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-lg-4">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="case-studies.html">Case Studies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <a href="contact.html" class="btn btn-indigo px-4 py-2 ms-lg-4">Start Project</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5">
+    <!-- Breadcrumbs -->
+    <nav aria-label="breadcrumb" class="mb-4">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="services.html" class="text-decoration-none text-muted small fw-bold">Services</a>
+        </li>
+        <li class="breadcrumb-item active small fw-bold text-indigo" id="breadcrumb-active">
+          Loading...
+        </li>
+      </ol>
+    </nav>
+
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6">
+        <div class="rounded-3xl d-flex align-items-center justify-content-center border"
+          style="height: 450px; background: #f1f5f9">
+          <h2 class="display-1 text-indigo opacity-25 fw-black" id="visual-id">
+            ID
+          </h2>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <h1 class="display-4 fw-black mb-3" id="service-name">
+          Service Name
+        </h1>
+        <p class="h1 fw-black mb-4" id="service-price" style="color: var(--indigo)">
+          $0.00
+        </p>
+        <p class="lead text-muted mb-5 leading-relaxed" id="service-desc">
+          Loading description...
+        </p>
+
+        <button id="add_to_cart_btn" onclick="handleAddToCart()"
+          class="btn btn-indigo btn-lg w-100 py-4 rounded-3xl shadow-lg fs-5">
+          Add to Project & Checkout
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="py-5 mt-5">
+    <div class="container">
+      <div class="row pb-5 border-bottom border-secondary mb-5 align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <h3 class="text-white fw-bold">Join our Newsletter</h3>
+          <p class="mb-0">Practice newsletter form tracking here.</p>
+        </div>
+        <div class="col-md-6">
+          <form id="footer_newsletter" class="d-flex gap-2">
+            <input type="email" class="form-control footer-input py-3" placeholder="Enter your email" required />
+            <button type="submit" class="btn btn-indigo px-4 fw-bold rounded-3">
+              Join
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between small fw-bold text-uppercase">
+        <p class="mb-0">© 2026 Nexus Digital.</p>
+        <div class="d-flex gap-4">
+          <a href="https://linkedin.com" target="_blank" class="text-reset text-decoration-none">LinkedIn</a><a
+            href="https://twitter.com" target="_blank" class="text-reset text-decoration-none">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+  <script>
+    // 1. DATA DATABASE
+    const serviceData = {
+      SEO_500: {
+        name: "Technical SEO Audit",
+        price: 500,
+        desc: "Deep technical analysis of site health and core vitals.",
+      },
+      PPC_1200: {
+        name: "Paid Search (PPC)",
+        price: 1200,
+        desc: "Intent-based Google Ads management to drive immediate ROI.",
+      },
+      SOC_800: {
+        name: "Social Media Ads",
+        price: 800,
+        desc: "Creative-led advertising on Meta, LinkedIn, and TikTok.",
+      },
+      ANA_1500: {
+        name: "Analytics Setup",
+        price: 1500,
+        desc: "Full GA4 & GTM server-side tracking implementation.",
+      },
+      CON_2000: {
+        name: "Content Marketing",
+        price: 2000,
+        desc: "SEO-driven content strategy and high-authority production.",
+      },
+      EML_900: {
+        name: "Email Automation",
+        price: 900,
+        desc: "Klaviyo and lifecycle automation for e-commerce brands.",
+      },
+    };
+
+    // 2. GET URL PARAMETERS
+    const urlParams = new URLSearchParams(window.location.search);
+    const serviceId = urlParams.get("id") || "SEO_500"; // Default to SEO if none found
+    const currentProduct = serviceData[serviceId];
+
+    // 3. UPDATE UI
+    if (currentProduct) {
+      document.getElementById("service-name").innerText = currentProduct.name;
+      document.getElementById("breadcrumb-active").innerText =
+        currentProduct.name;
+      document.getElementById("service-price").innerText =
+        "$" + currentProduct.price.toFixed(2);
+      document.getElementById("service-desc").innerText = currentProduct.desc;
+      document.getElementById("visual-id").innerText =
+        serviceId.split("_")[0];
+
+      // 4. GA4 VIEW_ITEM EVENT
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "view_item",
+        ecommerce: {
+          currency: "USD",
+          value: currentProduct.price,
+          items: [
+            {
+              item_id: serviceId,
+              item_name: currentProduct.name,
+              price: currentProduct.price,
+              item_brand: "Nexus Digital",
+              quantity: 1,
+            },
+          ],
+        },
+      });
+    }
+
+    // 5. ADD TO CART LOGIC
+    function handleAddToCart() {
+      window.dataLayer.push({
+        event: "add_to_cart",
+        ecommerce: {
+          currency: "USD",
+          value: currentProduct.price,
+          items: [
+            {
+              item_id: serviceId,
+              item_name: currentProduct.name,
+              price: currentProduct.price,
+              quantity: 1,
+            },
+          ],
+        },
+      });
+      setTimeout(() => {
+        window.location.href = "checkout.html?id=" + serviceId;
+      }, 300);
+    }
+  </script>
+</body>
+
+</html>

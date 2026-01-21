@@ -1,0 +1,146 @@
+/* custom.css */
+:root {
+  --indigo: #6366f1;
+  --indigo-hover: #4f46e5;
+  --slate-900: #0f172a;
+  --slate-600: #475569;
+  --slate-50: #f8fafc;
+}
+
+body {
+  padding-top: 85px;
+  /* Space for fixed header */
+  background-color: var(--slate-50);
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  color: var(--slate-900);
+}
+
+/* Typography */
+.fw-black {
+  font-weight: 900 !important;
+}
+
+.tracking-tighter {
+  letter-spacing: -0.05em;
+}
+
+/* Navigation */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(10px);
+}
+
+.nav-link {
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--slate-900) !important;
+  transition: color 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--indigo) !important;
+}
+
+.nav-link.active {
+  pointer-events: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* Buttons */
+.btn-indigo {
+  background-color: var(--indigo) !important;
+  color: white !important;
+  border-radius: 99px;
+  font-weight: 700;
+  border: none;
+  transition: all 0.3s;
+}
+
+.btn-indigo:hover {
+  background-color: var(--slate-900);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline-dark {
+  border-radius: 1rem;
+  border-width: 2px;
+  font-weight: 700;
+}
+
+/* Components */
+.rounded-3xl {
+  border-radius: 1.5rem !important;
+}
+
+.card {
+  border: none;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.form-control:focus,
+.form-select:focus {
+  box-shadow: none;
+  border-color: var(--indigo);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1) !important;
+}
+
+footer {
+  background-color: var(--slate-900);
+  color: #94a3b8;
+}
+
+footer h3 {
+  color: white;
+}
+
+/* Newsletter Input */
+
+/* Add this to your existing custom.css */
+
+.footer-input {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid #334155;
+  color: white !important;
+  border-radius: 0.75rem;
+}
+
+.footer-input:focus {
+  background: transparent;
+  border-color: var(--indigo);
+  color: white;
+  box-shadow: none;
+}
+
+/* Fix Placeholder Visibility */
+.footer-input::placeholder {
+  color: #94a3b8 !important;
+  /* Light slate color */
+  opacity: 1;
+}
+
+/* Fix for IE/Edge */
+.footer-input:-ms-input-placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Fix for Chrome/Safari */
+.footer-input::-webkit-input-placeholder {
+  color: #94a3b8 !important;
+}
