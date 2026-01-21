@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+
 /* custom.css */
 :root {
   --indigo: #6366f1;
@@ -11,11 +13,7 @@ body {
   padding-top: 85px;
   /* Space for fixed header */
   background-color: var(--slate-50);
-  font-family:
-    "Inter",
-    system-ui,
-    -apple-system,
-    sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   color: var(--slate-900);
 }
 

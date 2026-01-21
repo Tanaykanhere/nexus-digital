@@ -67,6 +67,7 @@
             scale their paid media spend by 400% with a 4.2x ROAS.
           </p>
 
+
           <!-- Stats Bar (Element Visibility Target) -->
           <div class="row g-3 py-4 border-y border-light mt-5" id="stats-summary">
             <div class="col-4 border-end">
@@ -95,163 +96,164 @@
             </div>
           </div>
         </header>
+      </div>
 
-        <!-- SECTION 1: THE CHALLENGE (25% Scroll Marker) -->
-        <section class="py-5" style="margin-bottom: 200px">
-          <h2 class="fw-black mb-4">Phase 1: The Attribution Crisis</h2>
-          <p class="text-secondary fs-5 leading-relaxed">
-            When GlobalTech Inc. approached Nexus, they were facing a plateau.
-            Despite spending $50k/month on Google Ads and LinkedIn, they
-            couldn't accurately measure which campaigns were driving "Sales
-            Qualified Leads" (SQLs) versus just "MQLs."
-          </p>
-          <p class="text-secondary fs-5 leading-relaxed mt-4">
-            The existing GA4 setup was defaulting 60% of conversions to
-            "Direct" or "Unassigned" channels. This "Dark Social" problem
-            meant the CMO was effectively guessing where to allocate the next
-            quarter's budget. Their Customer Acquisition Cost (CAC) was
-            creeping up to $450, which was unsustainable for their LTV
-            (Lifetime Value).
-          </p>
-        </section>
+      <!-- SECTION 1: THE CHALLENGE (25% Scroll Marker) -->
+      <section class="py-5">
+        <h2 class="fw-black mb-4">Phase 1: The Attribution Crisis</h2>
+        <p class="text-secondary fs-5 leading-relaxed">
+          When GlobalTech Inc. approached Nexus, they were facing a plateau.
+          Despite spending $50k/month on Google Ads and LinkedIn, they
+          couldn't accurately measure which campaigns were driving "Sales
+          Qualified Leads" (SQLs) versus just "MQLs."
+        </p>
+        <p class="text-secondary fs-5 leading-relaxed mt-4">
+          The existing GA4 setup was defaulting 60% of conversions to
+          "Direct" or "Unassigned" channels. This "Dark Social" problem
+          meant the CMO was effectively guessing where to allocate the next
+          quarter's budget. Their Customer Acquisition Cost (CAC) was
+          creeping up to $450, which was unsustainable for their LTV
+          (Lifetime Value).
+        </p>
+      </section>
 
-        <!-- SECTION 2: THE STRATEGY (50% Scroll Marker) -->
-        <section class="py-5" style="margin-bottom: 200px" id="strategy-section">
-          <h2 class="fw-black mb-4">
-            Phase 2: Full-Funnel Tracking Infrastructure
-          </h2>
-          <p class="text-secondary fs-5 leading-relaxed">
-            Our first move was not increasing ad spend—it was fixing the
-            measurement. We implemented a **Server-Side Google Tag Manager
-            (sGTM)** environment to bypass ad-blockers and cookie
-            restrictions.
-          </p>
-          <div class="bg-light p-5 rounded-3xl border my-5">
-            <h4 class="fw-bold mb-3">Key Technical Updates:</h4>
-            <ul class="text-secondary space-y-3">
-              <li>
-                <strong>Enhanced Conversions:</strong> Implemented hashing of
-                user data to improve Google Ads match rates by 15%.
-              </li>
-              <li>
-                <strong>Custom DataLayer:</strong> Built a dataLayer push for
-                CRM events to track "Offline Conversions" back to specific
-                click IDs.
-              </li>
-              <li>
-                <strong>BigQuery Export:</strong> Configured raw data export
-                to analyze user paths beyond the standard GA4 interface.
-              </li>
-            </ul>
-          </div>
-        </section>
+      <!-- SECTION 2: THE STRATEGY (50% Scroll Marker) -->
+      <section class="py-5" id="strategy-section">
+        <h2 class="fw-black mb-4">
+          Phase 2: Full-Funnel Tracking Infrastructure
+        </h2>
+        <p class="text-secondary fs-5 leading-relaxed">
+          Our first move was not increasing ad spend—it was fixing the
+          measurement. We implemented a **Server-Side Google Tag Manager
+          (sGTM)** environment to bypass ad-blockers and cookie
+          restrictions.
+        </p>
+        <div class="bg-light p-5 rounded-3xl border my-5">
+          <h4 class="fw-bold mb-3">Key Technical Updates:</h4>
+          <ul class="text-secondary space-y-3">
+            <li>
+              <strong>Enhanced Conversions:</strong> Implemented hashing of
+              user data to improve Google Ads match rates by 15%.
+            </li>
+            <li>
+              <strong>Custom DataLayer:</strong> Built a dataLayer push for
+              CRM events to track "Offline Conversions" back to specific
+              click IDs.
+            </li>
+            <li>
+              <strong>BigQuery Export:</strong> Configured raw data export
+              to analyze user paths beyond the standard GA4 interface.
+            </li>
+          </ul>
+        </div>
+      </section>
 
-        <!-- CALL TO ACTION (Click Tracking Practice) -->
-        <div class="bg-indigo-600 p-5 rounded-3xl text-white text-center shadow-xl my-5"
-          style="background-color: var(--indigo)">
-          <h3 class="fw-bold mb-3">Master the Growth Methodology</h3>
-          <p class="mb-4 opacity-75">
-            Download the full technical teardown PDF (32 Pages).
+      <!-- CALL TO ACTION (Click Tracking Practice) -->
+      <div class="bg-indigo-600 p-5 rounded-3xl text-white text-center shadow-xl my-5"
+        style="background-color: var(--indigo)">
+        <h3 class="fw-bold mb-3">Master the Growth Methodology</h3>
+        <p class="mb-4 opacity-75">
+          Download the full technical teardown PDF (32 Pages).
+        </p>
+        <a href="teardown-full.pdf" id="pdf_teardown_btn"
+          class="btn btn-light btn-lg px-5 py-3 rounded-3xl fw-bold text-primary">Download Case Study PDF</a>
+      </div>
+
+      <!-- SECTION 3: THE EXECUTION (75% Scroll Marker) -->
+      <section class="py-5">
+        <h2 class="fw-black mb-4">Phase 3: Intent-Based Scaling</h2>
+        <p class="text-secondary fs-5 leading-relaxed">
+          With clean data flowing, we discovered that their LinkedIn
+          Top-of-Funnel ads were actually the primary drivers of Search
+          volume on Google. We shifted budget from "Broad Match" search
+          terms to a "Search Retargeting" strategy.
+        </p>
+        <p class="text-secondary fs-5 leading-relaxed mt-4">
+          We focused on "Search Intent" rather than just "Search Volume." By
+          excluding low-intent audiences and focusing spend on users who had
+          previously engaged with their technical whitepapers, we saw an
+          immediate 22% drop in the cost per demo request.
+        </p>
+      </section>
+
+      <!-- SECTION 4: THE RESULTS (100% Scroll Marker) -->
+      <!-- SECTION 4: THE RESULTS (100% Scroll Marker) -->
+      <section class="py-5">
+        <div class="text-center mb-5">
+          <h2 class="fw-black display-5">The Final Impact</h2>
+          <p class="text-muted">
+            Measurable growth achieved over a 180-day optimization cycle.
           </p>
-          <a href="teardown-full.pdf" id="pdf_teardown_btn"
-            class="btn btn-light btn-lg px-5 py-3 rounded-3xl fw-bold text-primary">Download Case Study PDF</a>
         </div>
 
-        <!-- SECTION 3: THE EXECUTION (75% Scroll Marker) -->
-        <section class="py-5" style="margin-bottom: 200px">
-          <h2 class="fw-black mb-4">Phase 3: Intent-Based Scaling</h2>
-          <p class="text-secondary fs-5 leading-relaxed">
-            With clean data flowing, we discovered that their LinkedIn
-            Top-of-Funnel ads were actually the primary drivers of Search
-            volume on Google. We shifted budget from "Broad Match" search
-            terms to a "Search Retargeting" strategy.
-          </p>
-          <p class="text-secondary fs-5 leading-relaxed mt-4">
-            We focused on "Search Intent" rather than just "Search Volume." By
-            excluding low-intent audiences and focusing spend on users who had
-            previously engaged with their technical whitepapers, we saw an
-            immediate 22% drop in the cost per demo request.
-          </p>
-        </section>
-
-        <!-- SECTION 4: THE RESULTS (100% Scroll Marker) -->
-        <!-- SECTION 4: THE RESULTS (100% Scroll Marker) -->
-        <section class="py-5">
-          <div class="text-center mb-5">
-            <h2 class="fw-black display-5">The Final Impact</h2>
-            <p class="text-muted">
-              Measurable growth achieved over a 180-day optimization cycle.
-            </p>
-          </div>
-
-          <!-- NEW MODERN IMPACT CARD -->
-          <div class="row g-0 rounded-3xl overflow-hidden shadow-xl border bg-white mb-5">
-            <!-- Left Column: Testimonial -->
-            <div class="col-lg-7 p-5 d-flex flex-column justify-content-center border-end">
-              <!-- Decorative Quote Icon -->
-              <div class="mb-4" style="color: var(--indigo); opacity: 0.2">
-                <svg width="60" height="60" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C14.9124 8 14.017 7.10457 14.017 6V3L22.017 3V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM3.017 21L3.017 18C3.017 16.8954 3.91243 16 5.017 16H8.017C8.56928 16 9.017 15.5523 9.017 15V9C9.017 8.44772 8.56928 8 8.017 8H5.017C3.91243 8 3.017 7.10457 3.017 6V3L11.017 3V15C11.017 18.3137 8.33072 21 5.017 21H3.017Z" />
-                </svg>
-              </div>
-              <h3 class="fw-bold mb-4 fs-4 italic text-dark" style="line-height: 1.6">
-                "Nexus Digital didn't just manage our ads; they rebuilt our
-                entire understanding of our customer journey. We now scale
-                with confidence knowing exactly where every dollar goes."
-              </h3>
-              <div class="d-flex align-items-center">
-                <div class="bg-indigo rounded-circle me-3" style="
+        <!-- NEW MODERN IMPACT CARD -->
+        <div class="row g-0 rounded-3xl overflow-hidden shadow-xl border bg-white mb-5">
+          <!-- Left Column: Testimonial -->
+          <div class="col-lg-7 p-5 d-flex flex-column justify-content-center border-end">
+            <!-- Decorative Quote Icon -->
+            <div class="mb-4" style="color: var(--indigo); opacity: 0.2">
+              <svg width="60" height="60" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C14.9124 8 14.017 7.10457 14.017 6V3L22.017 3V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM3.017 21L3.017 18C3.017 16.8954 3.91243 16 5.017 16H8.017C8.56928 16 9.017 15.5523 9.017 15V9C9.017 8.44772 8.56928 8 8.017 8H5.017C3.91243 8 3.017 7.10457 3.017 6V3L11.017 3V15C11.017 18.3137 8.33072 21 5.017 21H3.017Z" />
+              </svg>
+            </div>
+            <h3 class="fw-bold mb-4 fs-4 italic text-dark" style="line-height: 1.6">
+              "Nexus Digital didn't just manage our ads; they rebuilt our
+              entire understanding of our customer journey. We now scale
+              with confidence knowing exactly where every dollar goes."
+            </h3>
+            <div class="d-flex align-items-center">
+              <div class="bg-indigo rounded-circle me-3" style="
                       width: 50px;
                       height: 50px;
                       background-color: var(--indigo);
                     "></div>
-                <div>
-                  <div class="fw-black text-dark">Sarah Jenkins</div>
-                  <div class="small text-muted fw-bold uppercase tracking-widest">
-                    CMO at GlobalTech Inc.
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Right Column: Metrics -->
-            <div class="col-lg-5 p-5 d-flex flex-column justify-content-center"
-              style="background-color: var(--slate-900)">
-              <div class="mb-5">
-                <div class="display-5 fw-black text-white mb-1 tracking-tighter">
-                  $2.1M
-                </div>
-                <div class="small text-indigo fw-bold uppercase tracking-widest" style="color: var(--indigo)">
-                  Pipeline Revenue Driven
-                </div>
-              </div>
-              <div class="mb-5">
-                <div class="display-5 fw-black text-white mb-1 tracking-tighter">
-                  15k+
-                </div>
-                <div class="small text-indigo fw-bold uppercase tracking-widest" style="color: var(--indigo)">
-                  Qualified Conversions
-                </div>
-              </div>
               <div>
-                <div class="display-5 fw-black text-white mb-1 tracking-tighter">
-                  4.2x
-                </div>
-                <div class="small text-indigo fw-bold uppercase tracking-widest" style="color: var(--indigo)">
-                  Return on Ad Spend
+                <div class="fw-black text-dark">Sarah Jenkins</div>
+                <div class="small text-muted fw-bold uppercase tracking-widest">
+                  CMO at GlobalTech Inc.
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Final CTA -->
-          <div class="text-center py-5">
-            <h3 class="fw-bold mb-4">Ready for your own success story?</h3>
-            <a href="contact.html" class="btn btn-indigo btn-lg px-5 py-3 shadow-lg">Scale Your Brand Today</a>
+          <!-- Right Column: Metrics -->
+          <div class="col-lg-5 p-5 d-flex flex-column justify-content-center"
+            style="background-color: var(--slate-900)">
+            <div class="mb-5">
+              <div class="display-5 fw-black text-white mb-1 tracking-tighter">
+                $2.1M
+              </div>
+              <div class="small text-indigo fw-bold uppercase tracking-widest" style="color: var(--indigo)">
+                Pipeline Revenue Driven
+              </div>
+            </div>
+            <div class="mb-5">
+              <div class="display-5 fw-black text-white mb-1 tracking-tighter">
+                15k+
+              </div>
+              <div class="small text-indigo fw-bold uppercase tracking-widest" style="color: var(--indigo)">
+                Qualified Conversions
+              </div>
+            </div>
+            <div>
+              <div class="display-5 fw-black text-white mb-1 tracking-tighter">
+                4.2x
+              </div>
+              <div class="small text-indigo fw-bold uppercase tracking-widest" style="color: var(--indigo)">
+                Return on Ad Spend
+              </div>
+            </div>
           </div>
-        </section>
-      </div>
+        </div>
+
+        <!-- Final CTA -->
+        <div class="text-center py-5">
+          <h3 class="fw-bold mb-4">Ready for your own success story?</h3>
+          <a href="contact.html" class="btn btn-indigo btn-lg px-5 py-3 shadow-lg">Scale Your Brand Today</a>
+        </div>
+      </section>
+
     </div>
   </main>
 
