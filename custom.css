@@ -1,144 +1,376 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+/* =========================================
+   NEXUS DIGITAL | MODERN UI (FINAL 2026)
+   ========================================= */
 
-/* custom.css */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
 :root {
+  /* Brand Colors */
   --indigo: #6366f1;
-  --indigo-hover: #4f46e5;
+  --indigo-dark: #4338ca;
+  --indigo-glow: rgba(99, 102, 241, 0.4);
+
+  /* Neutrals */
   --slate-900: #0f172a;
+  --slate-800: #1e293b;
   --slate-600: #475569;
   --slate-50: #f8fafc;
+  --surface: #ffffff;
+
+  /* UI Elements */
+  --radius-xl: 1.25rem;
+  --radius-lg: 0.75rem;
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 25px 50px -12px rgba(99, 102, 241, 0.15);
 }
 
 body {
-  padding-top: 85px;
-  /* Space for fixed header */
-  background-color: var(--slate-50);
+  padding-top: 80px;
+  background-color: #f8fafc;
+  background-image:
+    radial-gradient(circle at 15% 0%, rgba(99, 102, 241, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 85% 0%, rgba(168, 85, 247, 0.08) 0%, transparent 40%);
+  background-attachment: fixed;
   font-family: 'Plus Jakarta Sans', sans-serif;
   color: var(--slate-900);
+  line-height: 1.6;
+  font-size: 0.95rem;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Typography */
+/* =========================================
+   TYPOGRAPHY SCALING (COMPACT)
+   ========================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--slate-900);
+  letter-spacing: -0.03em;
+  font-weight: 700;
+}
+
+h1,
+.h1 {
+  font-size: 2.25rem;
+}
+
+h2,
+.h2 {
+  font-size: 1.75rem;
+}
+
+h3,
+.h3 {
+  font-size: 1.5rem;
+}
+
+h4,
+.h4 {
+  font-size: 1.25rem;
+}
+
+h5,
+.h5 {
+  font-size: 1.1rem;
+}
+
+.display-1 {
+  font-size: 4rem !important;
+}
+
+.display-3 {
+  font-size: 2.75rem !important;
+}
+
+.display-4 {
+  font-size: 2.25rem !important;
+}
+
+.display-5 {
+  font-size: 1.75rem !important;
+}
+
+.display-6 {
+  font-size: 1.5rem !important;
+}
+
+.lead {
+  font-size: 1.1rem !important;
+  font-weight: 400;
+  color: var(--slate-600) !important;
+}
+
 .fw-black {
-  font-weight: 900 !important;
+  font-weight: 800 !important;
 }
 
-.tracking-tighter {
-  letter-spacing: -0.05em;
+.leading-tight {
+  line-height: 1.2;
 }
 
-/* Navigation */
+.tracking-widest {
+  letter-spacing: 0.12em;
+}
+
+.text-muted {
+  color: #64748b !important;
+}
+
+.text-gradient-indigo {
+  background: -webkit-linear-gradient(45deg, var(--indigo), var(--indigo-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* =========================================
+   NAVIGATION (Glass)
+   ========================================= */
+
 .navbar {
-  background-color: rgba(255, 255, 255, 0.9) !important;
-  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5) !important;
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+}
+
+.navbar-brand {
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  font-size: 1.35rem !important;
 }
 
 .nav-link {
-  font-weight: 700;
-  font-size: 0.75rem;
+  font-weight: 600;
+  font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--slate-900) !important;
-  transition: color 0.2s;
+  letter-spacing: 0.05em;
+  color: var(--slate-600) !important;
+  padding: 0.4rem 0.8rem !important;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
 }
 
-.nav-link:hover,
+.nav-link:hover {
+  color: var(--indigo) !important;
+  background-color: rgba(99, 102, 241, 0.08);
+}
+
 .nav-link.active {
   color: var(--indigo) !important;
+  background-color: rgba(99, 102, 241, 0.12);
 }
 
-.nav-link.active {
-  pointer-events: none;
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+.btn {
+  font-size: 0.9rem;
+  padding: 0.6rem 1.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.navbar-toggler:focus {
-  box-shadow: none;
+.btn-lg {
+  font-size: 1rem;
+  padding: 0.75rem 2rem;
 }
 
-/* Buttons */
 .btn-indigo {
-  background-color: var(--indigo) !important;
+  background: linear-gradient(135deg, var(--indigo) 0%, var(--indigo-dark) 100%) !important;
+  border: 1px solid transparent;
   color: white !important;
   border-radius: 99px;
   font-weight: 700;
-  border: none;
-  transition: all 0.3s;
+  box-shadow: 0 4px 6px -1px var(--indigo-glow);
 }
 
 .btn-indigo:hover {
-  background-color: var(--slate-900);
   transform: translateY(-2px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 15px -3px var(--indigo-glow);
+  filter: brightness(110%);
 }
 
 .btn-outline-dark {
-  border-radius: 1rem;
-  border-width: 2px;
+  border: 1px solid var(--slate-900);
+  background: transparent;
+  color: var(--slate-900);
+  border-radius: 99px;
   font-weight: 700;
 }
 
-/* Components */
-.rounded-3xl {
-  border-radius: 1.5rem !important;
+.btn-outline-dark:hover {
+  background: var(--slate-900);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
 }
 
-.card {
-  border: none;
-  transition:
-    transform 0.3s,
-    box-shadow 0.3s;
+/* =========================================
+   CARDS & CONTAINERS
+   ========================================= */
+
+.rounded-3xl {
+  border-radius: var(--radius-xl) !important;
+}
+
+/* Glass Cards */
+.card,
+.bg-white.p-5.rounded-3xl {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 1;
+}
+
+.card:hover,
+a .card:hover,
+#features_section .col-md-4:hover>div {
+  transform: translateY(-5px);
+  background: #ffffff;
+  box-shadow: var(--shadow-hover) !important;
+  border-color: rgba(99, 102, 241, 0.2);
+  z-index: 10;
+}
+
+.badge,
+.tag-pill {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.4em 1em;
+  border-radius: 99px;
+  text-transform: uppercase;
+}
+
+/* =========================================
+   FORMS
+   ========================================= */
+
+.form-control,
+.form-select {
+  font-size: 0.95rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #cbd5e1;
+  border-radius: var(--radius-lg) !important;
+  padding: 0.7rem 1rem;
+  font-weight: 500;
+  color: var(--slate-900);
+  transition: all 0.2s;
 }
 
 .form-control:focus,
 .form-select:focus {
-  box-shadow: none;
+  background-color: #ffffff;
   border-color: var(--indigo);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  outline: none;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1) !important;
-}
+/* =========================================
+   FOOTER
+   ========================================= */
 
 footer {
   background-color: var(--slate-900);
   color: #94a3b8;
+  font-size: 0.9rem;
 }
 
 footer h3 {
   color: white;
+  font-size: 1.5rem;
 }
-
-/* Newsletter Input */
-
-/* Add this to your existing custom.css */
 
 .footer-input {
   background: rgba(255, 255, 255, 0.05) !important;
-  border: 1px solid #334155;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   color: white !important;
-  border-radius: 0.75rem;
+  font-size: 0.9rem;
 }
 
 .footer-input:focus {
-  background: transparent;
+  background: rgba(255, 255, 255, 0.1) !important;
   border-color: var(--indigo);
-  color: white;
-  box-shadow: none;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
 }
 
-/* Fix Placeholder Visibility */
 .footer-input::placeholder {
-  color: #94a3b8 !important;
-  /* Light slate color */
+  color: rgba(255, 255, 255, 0.5) !important;
   opacity: 1;
 }
 
-/* Fix for IE/Edge */
-.footer-input:-ms-input-placeholder {
-  color: #94a3b8 !important;
+/* =========================================
+   CASE STUDY SPECIFICS
+   ========================================= */
+
+/* 1. Tag Pills */
+.tag-pill {
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  color: var(--slate-600);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-/* Fix for Chrome/Safari */
-.footer-input::-webkit-input-placeholder {
-  color: #94a3b8 !important;
+/* 2. Glass Featured Card (Right Side Hero) */
+.glass-card-featured {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: var(--radius-xl);
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.05),
+    0 8px 10px -6px rgba(0, 0, 0, 0.01),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+/* 3. Indigo Text for Stats */
+.text-indigo {
+  color: var(--indigo) !important;
+}
+
+/* 4. Floating Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* 5. Service Detail Price */
+#service-price {
+  font-size: 2.5rem;
+  letter-spacing: -0.05em;
+  font-weight: 800;
+  background: -webkit-linear-gradient(45deg, var(--indigo), var(--indigo-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-indigo-subtle {
+  width: 80px;
+  height: 80px;
+  background: #e0e7ff;
+  font-weight: 900;
+  font-size: 1.5rem;
 }
